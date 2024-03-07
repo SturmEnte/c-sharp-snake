@@ -1,6 +1,6 @@
 ﻿namespace c_sharp_snake
 {
-    partial class Form1
+    partial class Snake
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            snakeBlock = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)snakeBlock).BeginInit();
+            SuspendLayout();
+            // 
+            // snakeBlock
+            // 
+            snakeBlock.BackColor = Color.Lime;
+            snakeBlock.Location = new Point(0, 0);
+            snakeBlock.Name = "snakeBlock";
+            snakeBlock.Size = new Size(30, 30);
+            snakeBlock.TabIndex = 0;
+            snakeBlock.TabStop = false;
+            // 
+            // Snake
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(582, 553);
+            Controls.Add(snakeBlock);
+            Name = "Snake";
+            Text = "Snake";
+            ((System.ComponentModel.ISupportInitialize)snakeBlock).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox snakeBlock;
     }
 }
