@@ -23,8 +23,7 @@ namespace c_sharp_snake
             this.Controls.Add(greenSquare);
 
             greenSquare.Location = new Point((this.ClientSize.Width - greenSquare.Width) / 2,
-
-                                                (this.ClientSize.Height - greenSquare.Height) / 2); // Zentrieren des Quadrats
+                                             (this.ClientSize.Height - greenSquare.Height) / 2); // Zentrieren des Quadrats
 
         }
 
