@@ -12,20 +12,12 @@ namespace c_sharp_snake
             this.KeyPreview = true; // Stellen Sie sicher, dass die Form KeyDown-Events erhält.
         }
 
-
-
         private void InitializeGreenSquare()
-
         {
-
             greenSquare = new Panel
-
             {
-
                 Size = new Size(50, 50), // Größe des grünen Quadrats
-
                 BackColor = Color.Green // Farbe des Quadrats
-
             };
 
             this.Controls.Add(greenSquare);
@@ -60,7 +52,6 @@ namespace c_sharp_snake
 
         [STAThread]
         static void Main()
-
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
