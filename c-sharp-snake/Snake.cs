@@ -23,6 +23,11 @@ namespace c_sharp_snake
                     this.gameField[x,y] = 0;
                 }
             }
+
+            // Spawn the snake in the center of the game field
+            int snakeHeadX = Config.X_CELLS / 2;
+            int snakeHeadY = Config.Y_CELLS / 2;
+            gameField[snakeHeadX, snakeHeadY] = 1;
         }
 
         private void InitializeGreenSquare()
