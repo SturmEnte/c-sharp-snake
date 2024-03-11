@@ -5,8 +5,11 @@ namespace c_sharp_snake
     {
         private Panel greenSquare;
 
+        // 0 empty
+        // 1 snake
+        // 2 apple
         private int[,] gameField;
-
+        
         public Snake()
         {
             InitializeGreenSquare();
