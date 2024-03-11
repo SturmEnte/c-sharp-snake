@@ -9,6 +9,8 @@ namespace c_sharp_snake
         // 1 snake
         // 2 apple
         private int[,] gameField;
+
+        private List<Coordinates> snakeBody;
         
         public Snake()
         {
@@ -16,8 +18,9 @@ namespace c_sharp_snake
             this.KeyDown += MainForm_KeyDown;
             this.KeyPreview = true; // Stellen Sie sicher, dass die Form KeyDown-Events erhält.
 
+            // Initialize game field
             this.gameField = new int[Config.X_CELLS, Config.Y_CELLS];
-
+            
             // Set the value of all cells to 0 (empty)
             for(int x = 0; x < Config.X_CELLS; x++)
             {
@@ -31,6 +34,11 @@ namespace c_sharp_snake
             int snakeHeadX = Config.X_CELLS / 2;
             int snakeHeadY = Config.Y_CELLS / 2;
             gameField[snakeHeadX, snakeHeadY] = 1;
+            
+            // Initialize snake
+            snakeBody = new List<Coordinates>();
+            snakeBody.Add(new Coordinates(snakeHeadX, snakeHeadY));
+        
         }
 
         private void InitializeGreenSquare()
