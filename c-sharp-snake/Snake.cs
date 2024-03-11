@@ -5,11 +5,24 @@ namespace c_sharp_snake
     {
         private Panel greenSquare;
 
+        private int[,] gameField;
+
         public Snake()
         {
             InitializeGreenSquare();
             this.KeyDown += MainForm_KeyDown;
             this.KeyPreview = true; // Stellen Sie sicher, dass die Form KeyDown-Events erhält.
+
+            this.gameField = new int[Config.X_CELLS, Config.Y_CELLS];
+
+            // Set the value of all cells to 0 (empty)
+            for(int x = 0; x < Config.X_CELLS; x++)
+            {
+                for(int y = 0; y < Config.Y_CELLS; y++)
+                {
+                    this.gameField[x,y] = 0;
+                }
+            }
         }
 
         private void InitializeGreenSquare()
@@ -47,6 +60,11 @@ namespace c_sharp_snake
                     greenSquare.Left += 10; // Bewegen nach rechts
                     break;
             }
+        }
+
+        private void gameTickTimer_Tick(object sender, EventArgs e)
+        {
+
         }
 
         [STAThread]

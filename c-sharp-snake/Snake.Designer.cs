@@ -28,33 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            snakeBlock = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)snakeBlock).BeginInit();
+            components = new System.ComponentModel.Container();
+            gameTickTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // snakeBlock
+            // gameTickTimer
             // 
-            snakeBlock.BackColor = Color.Lime;
-            snakeBlock.Location = new Point(0, 0);
-            snakeBlock.Name = "snakeBlock";
-            snakeBlock.Size = new Size(30, 30);
-            snakeBlock.TabIndex = 0;
-            snakeBlock.TabStop = false;
+            gameTickTimer.Tick += gameTickTimer_Tick;
             // 
             // Snake
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(582, 553);
-            Controls.Add(snakeBlock);
+            ClientSize = new Size(884, 861);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Snake";
             Text = "Snake";
-            ((System.ComponentModel.ISupportInitialize)snakeBlock).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox snakeBlock;
+        private System.Windows.Forms.Timer gameTickTimer;
     }
 }

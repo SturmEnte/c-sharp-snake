@@ -8,8 +8,8 @@ namespace c_sharp_snake
 {
     class Config
     {
-        public static int SNAKE_SIZE = 30; // Pixels (width and height)
-        public static int GAME_CELL_WIDTH = 30; // Pixels
-        public static int GAME_CELL_HEIGHT = 30; // Pixels
+        public static int CELL_WIDTH = 30; // Pixels (width and height)
+        public static int X_CELLS = 30; // How many cells on x axis
+        public static int Y_CELLS = 30; // How many cells on y axis
     }
 }
